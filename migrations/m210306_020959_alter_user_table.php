@@ -14,7 +14,7 @@ class m210306_020959_alter_user_table extends Migration
     {
         $this->alterColumn('user', 'auth_key', 'string');
         
-        $this->createIndex('index_username', $this->table, 'username', true);
+        $this->createIndex('index_username', 'user', 'username', true);
     }
 
     /**
@@ -24,7 +24,7 @@ class m210306_020959_alter_user_table extends Migration
     {
         $this->alterColumn('user', 'auth_key', 'string not null');
         
-        $this->dropIndex('index_username', $this->table);
+        $this->dropIndex('index_username', 'user');
     }
 
 }
