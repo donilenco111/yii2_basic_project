@@ -38,3 +38,8 @@ tests/_support/_generated
 
 # Logs
 /log
+
+#Yii2 files
+controllers/.SiteController.php.kate-swp
+models/.RegistrationForm.php.kate-swp
+
