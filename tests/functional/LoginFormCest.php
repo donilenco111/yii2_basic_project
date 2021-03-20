@@ -1,7 +1,19 @@
 <?php
+use app\tests\fixtures\UserFixture;
 
 class LoginFormCest
 {
+    public function _fixtures()
+    {
+        return [
+            'users' => [
+                'class' => UserFixture::class,
+                // fixture data located in tests/_data/user.php
+                'dataFile' => codecept_data_dir() . 'user.php'
+            ],
+        ];
+    }
+    
     public function _before(\FunctionalTester $I)
     {
         $I->amOnRoute('site/login');
